@@ -1,8 +1,8 @@
 /* https://cloudninja.pw/docs/wofi.html */
 window {
     border: 2px solid #191724;
-    /*background-color: #26233a; */
-    background-image: linear-gradient(to top, #191724, #201e2c, #272535, #2e2c3d, #363346, #373448, #38354a, #39364c, #343147, #2f2c43, #2b283e, #26233a);
+    background-color: #26233a; 
+    /*background-image: linear-gradient(to top, #191724, #201e2c, #272535, #2e2c3d, #363346, #373448, #38354a, #39364c, #343147, #2f2c43, #2b283e, #26233a);*/
 }
 
 #input {

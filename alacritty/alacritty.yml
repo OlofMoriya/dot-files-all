@@ -186,11 +186,13 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-colors:
+  import: 
+    - ./rose-pine.yml
+#colors:
   # Default colors
-  primary:
-    background: '#191724'
-    foreground: '#e0def4'
+  #primary:
+  #background: '#191724'
+  #foreground: '#e0def4'
 
     # Bright and dim foreground colors
     #
@@ -282,15 +284,15 @@ colors:
   #  background: CellForeground
 
   # Normal colors
-  normal:
-    black:   '#191724'
-    red:     '#eb6f92'
-    green:   '#403d52'
-    yellow:  '#f6c177'
-    blue:    '#31748f'
-    magenta: '#c4a7e7'
-    cyan:    '#ebbcba'
-    white:   '#e0def4'
+  #  normal:
+  #black:   '#191724'
+  #red:     '#eb6f92'
+  #green:   '#31748f'
+  #yellow:  '#f6c177'
+  #blue:    '#c4a7e7'
+  #magenta: '#908caa'
+  #cyan:    '#ebbcba'
+  #white:   '#e0def4'
 
   # Bright colors
   #bright:

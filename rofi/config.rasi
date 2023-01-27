@@ -1,0 +1,90 @@
+configuration {
+  display-drun: "  :";
+  display-window: "Windows: ";
+  drun-display-format: "{icon} {name}";
+  modi: "window,run,drun";
+  font: "Fira Code Nerd Font Medium 13";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+@theme "/dev/null"
+
+* {
+  red      : #eb6f92;
+  lred     : #ebbcba;
+  green    : #31748f;
+  lgreen   : #9ccfd8;
+  yellow   : #f6c177;
+  lyellow  : #e0def4;
+  blue     : #c4a7e7;
+  lblue    : #908caa;
+  magenta  : #c4a7e7;
+  lmagenta : #e0def4;
+  cyan     : #9ccfd8;
+  lcyan    : #6e6a86;
+
+  fg       : #e0def4;
+  bg       : #191724;
+
+  disabled : #403d52;
+
+  background-color: @bg;
+
+  border: 0;
+  margin: 4;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+  padding: 12;
+}
+
+element {
+  padding: 8;
+  text-color: @fg;
+  border-radius: 8px;
+}
+
+element selected {
+  text-color: @bg;
+  background-image: linear-gradient(#ebbcba, #eb6f92);
+}
+
+element-text {
+  background-color: #1f1d2e00;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 40;
+}
+
+entry {
+  background-color: @bg;
+  padding: 12;
+  text-color: @fg;
+
+  margin-bottom: 50;
+}
+
+prompt {
+  background-color: @bg;
+  padding: 12;
+  text-color: @fg;
+
+  margin-bottom: 50;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 8;
+}
