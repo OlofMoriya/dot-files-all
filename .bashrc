@@ -90,15 +90,24 @@ alias ss='bash tmux-sessionizer.sh'
 alias sto='bash tmux-split-2-1.sh'
 alias work='cd ~/versioned/work/'
 alias personal='cd ~/versioned/personal/'
+alias iweb='cd ~/versioned/work/Inotek.Portal.Web/'
+alias iapi='cd ~/versioned/work/Inotek.Portal.Api/'
+alias cweb='cd ~/versioned/work/gpt-bwg-web/'
+alias capi='cd ~/versioned/work/gpt-bwg/'
 alias sm='~/versioned/personal/scripts/add_note.sh'
 alias gm=$'~/versioned/personal/scripts/get_latest.sh | jq \'.text\''
 alias gl='git log --graph --pretty=oneline --abbrev-commit'
+alias gpush='pass show -c azure-git && git push'
+alias gpull='pass show -c azure-git && git pull'
+alias gfetch='pass show -c azure-git && git fetch'
 alias keyboard='setxkbmap se'
 alias desk='~/.screenlayout/dual-home.sh'
 alias laptop='~/.screenlayout/laptop.sh'
-alias bat='batcat --theme=Rosé-Pine'
-alias bdiff='git diff --name-only --relative --diff-filter=d | xargs batcat --theme=Rosé-Pine --diff'
+alias bat='batcat'
+alias bdiff='git diff --name-only --relative --diff-filter=d | xargs batcat --diff'
 alias note='~/versioned/personal/scripts/ripgrep_notes.sh'
+alias gpt='~/versioned/personal/chat/target/release/chat'
+alias td='~/versioned/personal/todo-cli/target/release/todo-cli'
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -140,15 +149,14 @@ alias lock="loginctl lock-session"
 eval "$(starship init bash)"
 eval "$(setxkbmap se)"
 
-export OPENAI_API_KEY=NEEDSAKEYHERE
+export OPENAI_API_KEY=KEYHERE
 
 export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/local:$PATH
 export PATH=$HOME/versioned/personal/scripts:$PATH
 
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 export EDITOR=nvim
-
-
 
 . "$HOME/.cargo/env"
