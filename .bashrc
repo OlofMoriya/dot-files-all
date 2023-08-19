@@ -87,6 +87,7 @@ fi
 alias lsg='ls -la | grep'
 alias lss='ls -la'
 alias ss='bash tmux-sessionizer.sh'
+alias sa='bash zellij-sessionizer.sh'
 alias sto='bash tmux-split-2-1.sh'
 alias work='cd ~/versioned/work/'
 alias personal='cd ~/versioned/personal/'
@@ -108,6 +109,7 @@ alias bdiff='git diff --name-only --relative --diff-filter=d | xargs batcat --di
 alias note='~/versioned/personal/scripts/ripgrep_notes.sh'
 alias gpt='~/versioned/personal/chat/target/release/chat'
 alias td='~/versioned/personal/todo-cli/target/release/todo-cli'
+alias todo='/home/olof/versioned/personal/todo-tui/target/release/todo-tui'
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -149,7 +151,7 @@ alias lock="loginctl lock-session"
 eval "$(starship init bash)"
 eval "$(setxkbmap se)"
 
-export OPENAI_API_KEY=KEYHERE
+export OPENAI_API_KEY=KEY
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/local:$PATH
@@ -160,3 +162,10 @@ export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 export EDITOR=nvim
 
 . "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+source /usr/share/bash-completion/completions/fzf
+eval "$(atuin init bash)"
+eval "$(zoxide init bash)"
+
