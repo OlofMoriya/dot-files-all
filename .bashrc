@@ -84,8 +84,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias lsg='ls -la | grep'
-alias lss='ls -la'
 alias ss='bash tmux-sessionizer.sh'
 alias sa='bash zellij-sessionizer.sh'
 alias sto='bash tmux-split-2-1.sh'
